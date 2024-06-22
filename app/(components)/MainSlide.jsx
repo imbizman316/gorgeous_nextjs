@@ -4,11 +4,12 @@ import Image from "next/image";
 import React from "react";
 import { FaCircle } from "react-icons/fa";
 import { useState } from "react";
+import Carousel from "./Carousel";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 // import Slider from "react-slick";
 
-const images = [
+const slides = [
   {
     id: 0,
     url: "/images/662a5f4466fa6494f734114e_cover_img_01.jpg",
@@ -26,35 +27,30 @@ const images = [
   },
 ];
 
+// max-w-lg
+
 function MainSlide() {
-  const [position, setPosition] = useState(200);
-
-  const handleSlide = () => {
-    setPosition(position - 100);
-  };
-
   return (
-    <div>
-      <div className="flex flex-row items-center justify-center w-full relative">
-        {images.map((image) => (
-          <Image
-            key={image.id}
-            src={image.url}
-            // layout="fill"
-            // objectFit="contain"
-            width={300}
-            height={300} // Use the actual aspect ratio of your image
-            objectFit="contain"
-            alt="image1"
-            className={`left-[${position}px] absolute`}
-          />
-        ))}
+    <div className="flex items-center justify-center">
+      <div className="w-[2000px]">
+        <Carousel autoSlide={true} autoSlideInterval={300000}>
+          {slides.map((slide) => (
+            <div key={slide.id} className="w-full">
+              <Image
+                key={slide.id}
+                src={slide.url}
+                // layout="fill"
+                // objectFit="contain"
+                width={2000}
+                height={2000} // Use the actual aspect ratio of your image
+                objectFit="cover"
+                alt="image1"
+                className="w-full h-auto"
+              />
+            </div>
+          ))}
+        </Carousel>
       </div>
-      {images.map((image, index) => (
-        <button key={index} onClick={handleSlide}>
-          <FaCircle className="text-black" />
-        </button>
-      ))}
     </div>
   );
 }
