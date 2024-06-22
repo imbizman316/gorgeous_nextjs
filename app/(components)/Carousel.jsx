@@ -93,7 +93,7 @@ function Carousel({
             <div
               onClick={() => buttonHandle(i)}
               key={i}
-              className={`transition-all w-3 h-3 bg-white rounded-full ${
+              className={`transition-all w-3 h-3 cursor-pointer bg-white rounded-full ${
                 curr === i ? "p-2" : "bg-opacity-50"
               }`}
             ></div>

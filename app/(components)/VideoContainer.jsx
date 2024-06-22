@@ -4,6 +4,7 @@ function VideoContainer() {
   return (
     <div className="flex items-center justify-center p-10">
       <iframe
+        className="w-[400px] h-[300px] md:w-[600px] md:h-[500px] lg:w-[1260px] lg:h-[1000px]"
         width="1260"
         height="600"
         src="https://www.youtube.com/embed/3TQd2ahq6oU?si=j0bvvOmHppe7HAsh"
