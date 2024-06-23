@@ -1,3 +1,4 @@
+import Albums from "./components/Albums";
 import MainSlide from "./components/MainSlide";
 import MembersPics from "./components/MembersPics";
 import VideoContainer from "./components/VideoContainer";
@@ -8,6 +9,7 @@ export default function Home() {
       <MainSlide />
       <VideoContainer />
       <MembersPics />
+      <Albums />
     </div>
   );
 }
