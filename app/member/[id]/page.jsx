@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import React from "react";
 
@@ -43,10 +44,10 @@ const memberDetails = [
     varities: ["2021 리얼:타임:러브:아이:러브:디엠", "2021 MBC '방과후 설렘'"],
     photoAlbums: ["2022.12 Y매거진"],
     photos: [
-      "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6630386b2189ddf62ab6ffaf_%E1%84%89%E1%85%A5%E1%84%83%E1%85%A1%E1%84%92%E1%85%A7%E1%86%AB-Rising-%E1%84%90%E1%85%B5%E1%84%8C%E1%85%A5_s-p-800.jpg",
-      "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662efe074e60e3ebb5f34d0f_%E1%84%85%E1%85%A5%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%AE%E1%84%89%E1%85%A7%E1%86%AB-%E1%84%90%E1%85%B5%E1%84%8C%E1%85%A5-%E1%84%83%E1%85%A1%E1%84%92%E1%85%A7%E1%86%AB_s-p-800.jpg",
-      "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662efe080d51b3d2d278863d_%5BAria%5D-%E1%84%80%E1%85%A2%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%B5%E1%84%8C%E1%85%A5_%E1%84%83%E1%85%A1%E1%84%92%E1%85%A7%E1%86%AB_s-p-800.jpg",
-      "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b384c7f360e033c39c_S10_%E1%84%83%E1%85%A1%E1%84%92%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-800.jpg",
+      "/images/kaede_01.jpg",
+      "/images/kaede_02.jpg",
+      "/images/kaede_03.jpg",
+      "/images/kaede_04.jpg",
     ],
     videos: [
       "https://www.youtube.com/embed/tuGbExoxJEk",
@@ -82,35 +83,66 @@ function MemberDetail() {
         <div>
           <h1 className="text-3xl font-bold">Profile</h1>
           <table>
-            <tr>
-              <th>이름</th>
-              <td>{memberDetail.fullName}</td>
-            </tr>
-            <tr>
-              <th>활동 경력</th>
-              <td>
-                {memberDetail.activities.map((activity, index) => (
-                  <h1 key={index}>{activity}</h1>
-                ))}
-              </td>
-            </tr>
-            <tr>
-              <th>방송 경력</th>
-              <td>
-                {memberDetail.varities.map((varity, index) => (
-                  <h1 key={index}>{varity}</h1>
-                ))}
-              </td>
-            </tr>
-            <tr>
-              <th>화보</th>
-              <td>
-                {memberDetail.photoAlbums.map((photo, index) => (
-                  <h1 key={index}>{photo}</h1>
-                ))}
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <th>이름</th>
+                <td>{memberDetail.fullName}</td>
+              </tr>
+              <tr>
+                <th>활동 경력</th>
+                <td>
+                  {memberDetail.activities.map((activity, index) => (
+                    <h1 key={index}>{activity}</h1>
+                  ))}
+                </td>
+              </tr>
+              <tr>
+                <th>방송 경력</th>
+                <td>
+                  {memberDetail.varities.map((varity, index) => (
+                    <h1 key={index}>{varity}</h1>
+                  ))}
+                </td>
+              </tr>
+              <tr>
+                <th>화보</th>
+                <td>
+                  {memberDetail.photoAlbums.map((photo, index) => (
+                    <h1 key={index}>{photo}</h1>
+                  ))}
+                </td>
+              </tr>
+            </tbody>
           </table>
+        </div>
+      </div>
+      <div className="flex items-center justify-center w-full my-[5rem]">
+        <div className="grid grid-cols-2 gap-10">
+          {memberDetail.photos.map((photo, index) => (
+            <Image
+              key={index}
+              src={photo}
+              alt={memberDetail.name}
+              width={400}
+              height={400}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="w-full flex items-center justify-center my-10 px-[2.3rem]">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
+          {memberDetail.videos.map((video, index) => (
+            <iframe
+              key={index}
+              width="372"
+              height="210"
+              src={video}
+              title="tripleS 트리플에스 : Kaede.SSS"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          ))}
         </div>
       </div>
     </div>
