@@ -37,13 +37,14 @@ function MainSlide() {
           {slides.map((slide) => (
             <div key={slide.id} className="w-full">
               <Image
+                priority
                 key={slide.id}
                 src={slide.url}
                 // layout="fill"
                 // objectFit="contain"
                 width={2000}
                 height={2000} // Use the actual aspect ratio of your image
-                objectFit="cover"
+                // objectFit="cover"
                 alt="image1"
                 className="w-full h-auto"
               />

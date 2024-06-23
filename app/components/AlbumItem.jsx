@@ -14,9 +14,6 @@ function AlbumItem({
 }) {
   return (
     <div className="flex flex-col items-center justify-center sm:h-[500px] md:h-auto lg:h-auto">
-      <div className="p-10 w-[90%]">
-        <h1 className="text-4xl font-bold">Album</h1>
-      </div>
       <div className="relative">
         <video
           id={videoId}
@@ -28,7 +25,7 @@ function AlbumItem({
         )`,
           }}
           muted
-          playsinline
+          playsInline
           data-wf-ignore="true"
           data-object-fit="cover"
         >
@@ -46,7 +43,7 @@ function AlbumItem({
               // objectFit="contain"
               width={380}
               height={380} // Use the actual aspect ratio of your image
-              objectFit="cover"
+              // objectFit="cover"
               alt={title}
               className="w-auto h-auto"
             />
