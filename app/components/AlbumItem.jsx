@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Spotify } from "react-spotify-embed";
 
 function AlbumItem({
-  key,
   coverImage,
   title,
   stillImage,

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Repeat } from "react-feather";
+import data from "./data";
 
 const members = [
   {
@@ -96,14 +97,14 @@ function PictureBoxes() {
   return (
     <div>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        {members.map((member, index) => (
-          <Link href={`/member/${member.link}`} key={index}>
+        {data.members.map((member, index) => (
+          <Link href={`/member/${member.id}`} key={index}>
             <div
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseExit(index)}
               style={{
                 backgroundImage:
-                  isHover && member.id === hoverIndex
+                  isHover && index === hoverIndex
                     ? `url(${member.image2})`
                     : `url(${member.image1})`,
                 height: "500px",
