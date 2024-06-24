@@ -296,7 +296,8 @@ const data = {
         "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6627ed2b49e2df8779650ea2_231018_X_trendtakeover_tripleS-transcode.webm",
       musicLink:
         "https://open.spotify.com/album/1FEdDqMaOL8oZYzI4n27GM?si=mTiITmlHQpaGkoivGTv8Jw",
-      participants: [],
+      participants: ["s1-seoyeon", "s3-jiwoo", "s5-yooyeon"],
+      musicVideo: "https://www.youtube.com/embed/2tda_TCjz8w",
     },
     {
       id: "access",
@@ -312,7 +313,8 @@ const data = {
         "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf%2F6662ae77014c200e13b637a6_bgv_ASSEMBLE24-transcode.webm",
       musicLink:
         "https://open.spotify.com/album/0EsUBCjxGF328J7VRAE48Y?si=mTiITmlHQpaGkoivGTv8Jw",
-      participants: [],
+      participants: ["s2-hyerin", "s7-nakyoung"],
+      musicVideo: "https://www.youtube.com/embed/2tda_TCjz8w",
     },
   ],
 };
