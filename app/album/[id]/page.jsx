@@ -11,11 +11,12 @@ function AlbumPage() {
 
   return (
     <div className="min-h-screen pt-24">
-      <div className="w-full">
+      <div className="w-full bg-black">
         <video
           id={album.videoId}
           autoPlay
           loop
+          className="w-full opacity-50"
           style={{
             backgroundImage: `url(
           ${album.stillImage}
