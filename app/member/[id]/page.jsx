@@ -130,12 +130,12 @@ function MemberDetail() {
         </div>
       </div>
       <div className="w-full flex items-center justify-center my-10 px-[2.3rem]">
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {memberDetail.videos.map((video, index) => (
             <iframe
               key={index}
-              width="372"
-              height="210"
+              width="auto"
+              height="170"
               src={video}
               title="tripleS 트리플에스 : Kaede.SSS"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
