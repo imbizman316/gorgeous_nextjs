@@ -3,7 +3,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="flex flex-row justify-between mx-auto px-10 py-5 items-center fixed w-full h-[100px]">
+    <div className="flex flex-row justify-between mx-auto px-10 py-5 items-center fixed w-full h-[100px] z-10 bg-white opacity-[95%]">
       <Link className="text-3xl font-bold" href="/">
         tripleS
       </Link>
