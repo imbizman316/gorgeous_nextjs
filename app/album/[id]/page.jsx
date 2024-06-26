@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import data from "@/app/components/data";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import { Spotify } from "react-spotify-embed";
+import GalleryModal from "@/app/components/GalleryModal";
 
 function AlbumPage() {
   const { id } = useParams();
@@ -14,6 +15,21 @@ function AlbumPage() {
   const participants = data.members.filter((member) =>
     album.participants.includes(member.id)
   );
+
+  const participantsPhotos = [];
+  participants.forEach((member) => {
+    participantsPhotos.push(member.photos[0]);
+  });
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedPicture, setSelectedPicture] = useState(
+    participants[0].photos[0]
+  );
+
+  const handleGalleryClick = (photo) => {
+    setShowModal(true);
+    setSelectedPicture(photo);
+  };
 
   console.log(participants);
 
@@ -91,10 +107,19 @@ function AlbumPage() {
               alt={member.name}
               width={300}
               height={300}
+              onClick={() => handleGalleryClick(member.photos[0])}
             />
           ))}
         </div>
       </div>
+
+      {showModal && (
+        <GalleryModal
+          gallery={participantsPhotos}
+          selected={selectedPicture}
+          setShowModal={setShowModal}
+        />
+      )}
     </div>
   );
 }

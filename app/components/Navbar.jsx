@@ -42,8 +42,9 @@ function Navbar() {
         <div
           style={{ userSelect: "none" }}
           className="cursor-pointer relative p-2"
+          onClick={handleMemberClick}
         >
-          <h1 onClick={handleMemberClick}>Member</h1>
+          <h1>Member</h1>
           <div
             className={`${
               showMembers ? "block" : "hidden"
@@ -66,8 +67,9 @@ function Navbar() {
         <div
           className="cursor-pointer relative p-2"
           style={{ userSelect: "none" }}
+          onClick={handleAlbumClick}
         >
-          <h1 onClick={handleAlbumClick}>Album</h1>
+          <h1>Album</h1>
           <div
             className={`${
               showAlbums ? "block" : "hidden"

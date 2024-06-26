@@ -31,7 +31,7 @@ function AlbumItem({
           <source src={video1} data-wf-ignore="true" />
           <source src={video2} data-wf-ignore="true" />
         </video>
-        <div className="absolute top-0 flex flex-col justify-evenly items-center w-full h-full">
+        <div className="absolute top-0 flex flex-col justify-evenly items-center w-full h-full z-20">
           <h1 className="text-white text-2xl sm:text-3xl lg:text-5xl py-3 font-bold">
             {title}
           </h1>
