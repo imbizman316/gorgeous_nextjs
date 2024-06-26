@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import data from "./data";
 import Image from "next/image";
+import Link from "next/link";
 
 function SliderAllMembers() {
   const [page, setPage] = useState(0);
@@ -20,13 +21,14 @@ function SliderAllMembers() {
         }px] duration-200`}
       >
         {data.members.map((member, index) => (
-          <Image
-            key={index}
-            src={member.photos[0]}
-            alt={member.name}
-            width={200}
-            height={200}
-          />
+          <Link href={`/member/${member.id}`} key={index}>
+            <Image
+              src={member.photos[0]}
+              alt={member.name}
+              width={200}
+              height={200}
+            />
+          </Link>
         ))}
       </div>
     </div>
