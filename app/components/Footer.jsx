@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaDiscord,
 } from "react-icons/fa";
+import SocialMediaBar from "./SocialMediaBar";
 
 function Footer() {
   return (
@@ -15,7 +16,8 @@ function Footer() {
         <Link className="text-3xl font-bold" href="/">
           tripleS
         </Link>
-        <div className="flex flex-row gap-2">
+        <SocialMediaBar size="text-3xl" color="text-white" />
+        {/* <div className="flex flex-row gap-2">
           <a href="https://www.youtube.com/watch?v=HndlMCswvC0" target="_blank">
             <FaYoutube className="text-3xl" />
           </a>
@@ -31,7 +33,7 @@ function Footer() {
           <a href="">
             <FaDiscord className="text-3xl" />
           </a>
-        </div>
+        </div> */}
       </div>
       <hr className="my-8" />
       <div>Modhaus Inc. All rights reserved</div>

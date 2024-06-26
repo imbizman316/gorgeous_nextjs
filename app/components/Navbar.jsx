@@ -9,6 +9,7 @@ function Navbar() {
   const [showAlbums, setShowAlbums] = useState(false);
   const [currentMember, setCurrentMember] = useState("");
   const [currentAlbum, setCurrentAlbum] = useState("");
+  const [showHamburger, setShowHamburger] = useState(false);
 
   const handleMemberClick = () => {
     setShowAlbums(false);

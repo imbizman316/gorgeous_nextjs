@@ -1,6 +1,41 @@
 import React from "react";
+import {
+  FaYoutube,
+  FaTwitter,
+  FaTiktok,
+  FaInstagram,
+  FaDiscord,
+} from "react-icons/fa";
 
 const data = {
+  socialMedia: [
+    {
+      id: "youtube",
+      icon: FaYoutube,
+      link: "https://www.youtube.com/@triplescosmos",
+    },
+    {
+      id: "twitter",
+      icon: FaTwitter,
+      link: "https://x.com/triplescosmos",
+    },
+    {
+      id: "tiktok",
+      icon: FaTiktok,
+      link: "https://www.tiktok.com/@triplescosmos",
+    },
+    {
+      id: "instagram",
+      icon: FaInstagram,
+      link: "https://www.instagram.com/triplescosmos",
+    },
+    {
+      id: "discord",
+      icon: FaDiscord,
+      link: "https://discord.com/invite/triplescosmos",
+    },
+  ],
+
   members: [
     {
       id: "s1-seoyeon",
