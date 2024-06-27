@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import data from "./data";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
   const [showMembers, setShowMembers] = useState(false);
@@ -39,7 +40,17 @@ function Navbar() {
       <Link className="text-3xl font-bold" href="/">
         <div>tripleS</div>
       </Link>
-      <div className="flex flex-row gap-6 items-center">
+      <div
+        className={`${
+          showHamburger ||
+          (!showHamburger &&
+            "lg:flex md:flex-row lg:flex-row gap-6 items-center md:flex")
+        } ${
+          showHamburger
+            ? "flex flex-col items-center justify-start absolute w-full top-24 bg-white left-0 min-h-[30rem]"
+            : "hidden"
+        }`}
+      >
         <div
           style={{ userSelect: "none" }}
           className="cursor-pointer relative p-2"
@@ -91,6 +102,10 @@ function Navbar() {
           COSMO APP DOWNLOAD
         </div>
       </div>
+      <GiHamburgerMenu
+        className="md:hidden lg:hidden sm:block block text-4xl"
+        onClick={() => setShowHamburger(!showHamburger)}
+      />
     </div>
   );
 }
