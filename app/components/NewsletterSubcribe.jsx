@@ -22,6 +22,7 @@ function NewsletterSubcribe() {
     });
 
     if (!res.ok) {
+      showWarningMessage();
       throw new Error("Failed to create Email");
     }
 
@@ -30,6 +31,12 @@ function NewsletterSubcribe() {
 
   function showThankMessage() {
     setThankMessage("Thank you for subscribing!");
+    setEmail("");
+    setTimeout(() => setThankMessage(""), 3000);
+  }
+
+  function showWarningMessage() {
+    setThankMessage("Enter an email to send");
     setEmail("");
     setTimeout(() => setThankMessage(""), 3000);
   }
