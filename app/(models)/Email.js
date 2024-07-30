@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 const emailSchema = new Schema(
   {
     // email: String,
-    email: { type: "string", required: true, unique: true },
+    email: { type: String, required: true, unique: true },
   },
   {
     timestamps: true,
