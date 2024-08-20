@@ -36,7 +36,7 @@ function Navbar() {
   }, [currentMember, currentAlbum]);
 
   return (
-    <div className="flex flex-row justify-between mx-auto px-10 py-5 items-center fixed w-full h-[100px] z-10 bg-white opacity-[95%]">
+    <div className="flex flex-row justify-between mx-auto px-10 py-5 items-center fixed w-full h-[100px] z-50 bg-white opacity-[95%]">
       <Link className="text-3xl font-bold" href="/">
         <div>tripleS</div>
       </Link>
@@ -60,7 +60,7 @@ function Navbar() {
           <div
             className={`${
               showMembers ? "block" : "hidden"
-            } absolute z-20 bg-white p-5 flex flex-col gap-3`}
+            } absolute z-60 bg-white p-5 flex flex-col gap-3`}
           >
             {data.members.map((member) => (
               <Link
@@ -85,7 +85,7 @@ function Navbar() {
           <div
             className={`${
               showAlbums ? "block" : "hidden"
-            } absolute z-20 bg-white p-5 flex flex-col gap-3`}
+            } absolute z-60 bg-white p-5 flex flex-col gap-3`}
           >
             {data.albums.map((album) => (
               <Link
