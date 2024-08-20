@@ -94,7 +94,7 @@ function MemberDetail() {
           ))}
         </div>
       </div>
-      <SliderAllMembers />
+      {/* <SliderAllMembers /> */}
     </div>
   );
 }

@@ -22,7 +22,7 @@ const AlbumItem = forwardRef(
     }));
 
     return (
-      <div className="relative flex flex-col items-center justify-center sm:h-[600px] md:h-auto lg:h-auto z-20 pointer-events-auto">
+      <div className="relative flex flex-col items-center justify-center sm:h-[700px] md:h-auto lg:h-auto z-20 pointer-events-auto">
         <div className="relative">
           <video
             id={videoId}
@@ -45,13 +45,15 @@ const AlbumItem = forwardRef(
               {title}
             </h1>
             <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row gap-10">
-              <Image
-                src={coverImage}
-                alt={title}
-                width={380}
-                height={380}
-                className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] xl:w-[380px] xl:h-[380px] object-cover z-30"
-              />
+              <div className="flex justify-center items-center">
+                <Image
+                  src={coverImage}
+                  alt={title}
+                  width={380}
+                  height={380}
+                  className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[300px] lg:h-[300px] xl:w-[380px] xl:h-[380px] object-cover z-30"
+                />
+              </div>
               <Spotify
                 link={musicLink}
                 className="relative z-40 w-auto pointer-events-auto h-[400px]"

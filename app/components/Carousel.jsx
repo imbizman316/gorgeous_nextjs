@@ -71,13 +71,13 @@ function Carousel({
           <ChevronRight size={40} />
         </button>
       </div>
-      <div className="absolute bottom-4 right-0 left-0 pointer-events-none">
+      <div className="absolute bottom-8 right-0 left-0 pointer-events-none">
         <div className="flex items-center justify-center gap-2 pointer-events-auto">
           {slideArray.map((_, i) => (
             <div
               onClick={() => buttonHandle(i)}
               key={i}
-              className={`transition-all w-3 h-3 cursor-pointer bg-white rounded-full ${
+              className={`transition-all w-3 h-3 bg-white cursor-pointer border-2 border-black rounded-full ${
                 curr === i ? "p-2" : "bg-opacity-50"
               }`}
             ></div>

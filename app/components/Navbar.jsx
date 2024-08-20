@@ -23,10 +23,12 @@ function Navbar() {
   };
 
   const handleSetCurrentMember = (id) => {
+    setShowHamburger(false);
     setCurrentMember(id);
   };
 
   const handleSetCurrentAlbum = (id) => {
+    setShowHamburger(false);
     setCurrentAlbum(id);
   };
 
@@ -43,11 +45,10 @@ function Navbar() {
       <div
         className={`${
           showHamburger ||
-          (!showHamburger &&
-            "lg:flex md:flex-row lg:flex-row gap-6 items-center md:flex")
+          (!showHamburger && "lg:flex md:flex-row lg:flex-row gap-6 md:flex")
         } ${
           showHamburger
-            ? "flex flex-col items-center justify-start absolute w-full top-24 bg-white left-0 min-h-[30rem]"
+            ? "flex flex-col items-center justify-start pt-10 absolute w-full top-24 bg-white left-0 min-h-[30rem]"
             : "hidden"
         }`}
       >
@@ -60,7 +61,7 @@ function Navbar() {
           <div
             className={`${
               showMembers ? "block" : "hidden"
-            } absolute z-60 bg-white p-5 flex flex-col gap-3`}
+            } absolute z-60 bg-gray-800 p-5 flex flex-col gap-3 text-white`}
           >
             {data.members.map((member) => (
               <Link
@@ -85,7 +86,7 @@ function Navbar() {
           <div
             className={`${
               showAlbums ? "block" : "hidden"
-            } absolute z-60 bg-white p-5 flex flex-col gap-3`}
+            } absolute z-60 bg-gray-800 text-white p-5 flex flex-col gap-3`}
           >
             {data.albums.map((album) => (
               <Link
