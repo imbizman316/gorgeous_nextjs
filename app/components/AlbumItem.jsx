@@ -1,4 +1,3 @@
-// AlbumItem.jsx
 import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import Image from "next/image";
 import { Spotify } from "react-spotify-embed";
@@ -65,5 +64,8 @@ const AlbumItem = forwardRef(
     );
   }
 );
+
+// Adding a display name to the forwardRef component
+AlbumItem.displayName = "AlbumItem";
 
 export default AlbumItem;
