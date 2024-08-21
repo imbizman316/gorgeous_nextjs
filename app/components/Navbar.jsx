@@ -54,10 +54,10 @@ function Navbar() {
       >
         <div
           style={{ userSelect: "none" }}
-          className="cursor-pointer relative p-2"
+          className="cursor-pointer relative p-2 flex justify-center items-center"
           onClick={handleMemberClick}
         >
-          <h1>Member</h1>
+          <h1 className="text-sm">Member</h1>
           <div
             className={`${
               showMembers ? "block" : "hidden"
@@ -78,11 +78,11 @@ function Navbar() {
           </div>
         </div>
         <div
-          className="cursor-pointer relative p-2"
+          className="cursor-pointer relative p-2 flex justify-center items-center"
           style={{ userSelect: "none" }}
           onClick={handleAlbumClick}
         >
-          <h1>Album</h1>
+          <h1 className="text-sm">Album</h1>
           <div
             className={`${
               showAlbums ? "block" : "hidden"
@@ -99,8 +99,10 @@ function Navbar() {
             ))}
           </div>
         </div>
-        <div className="bg-black text-white p-3 line-clamp-2 w-[120px] text-center">
-          COSMO APP DOWNLOAD
+        <div className="bg-black text-white p-2 text-[11px] line-clamp-2 w-[120px] text-center">
+          <a href="https://play.google.com/store/apps/details?id=com.modhaus.cosmo&referrer=adjust_reftag%3DcyCMUN3BM78nl%26utm_source%3Dcontents%26utm_campaign%3Dhomepage%26utm_content%3Ddownload%26utm_term%3Dgnb">
+            COSMO APP DOWNLOAD
+          </a>
         </div>
       </div>
       <GiHamburgerMenu

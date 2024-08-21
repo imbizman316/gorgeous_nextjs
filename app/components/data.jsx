@@ -46,7 +46,8 @@ const data = {
         "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3048de580e73ad7d894_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
       link: "s1-seoyeon",
       fullName: "윤서연 (尹舒姸, Yoon SeoYeon)",
-      mainImage: "https://pbs.twimg.com/media/GMb7CXIW0AA_Wll.jpg:large",
+      mainImage:
+        "https://preview.redd.it/230806-triples-twitter-update-happy-birthday-s1-seoyeon-v0-38eegqtq0hgb1.jpg?auto=webp&s=f910be1c7683f6c5dc9aea4d7b010314e156b99b",
       summary: "S1 윤서연은 첫 번째 S이자 tripleS의 시작점이 된 S이다.",
       activities: [
         "2023.02 tripleS 'Rising'",
@@ -75,7 +76,8 @@ const data = {
       link: "s2-hyerin",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
-      mainImage: "https://pbs.twimg.com/media/GMb7CXIW0AA_Wll.jpg:large",
+      mainImage:
+        "https://i.pinimg.com/736x/01/25/3d/01253d41cdab42d22cf5d9c6bc5a7d78.jpg",
       summary:
         "S9 카에데는 밝고 쾌활한 성격의 소유자로, 귀여운 외모에 높은 아이돌 능력치로 주목 받고 있다! 다이나믹한 댄스가 강점!",
       activities: [
@@ -105,7 +107,8 @@ const data = {
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
-      mainImage: "https://pbs.twimg.com/media/GMb7CXIW0AA_Wll.jpg:large",
+      mainImage:
+        "https://i.pinimg.com/originals/d1/05/93/d10593ec3f617e5932fe887d87322325.jpg",
       summary:
         "S9 카에데는 밝고 쾌활한 성격의 소유자로, 귀여운 외모에 높은 아이돌 능력치로 주목 받고 있다! 다이나믹한 댄스가 강점!",
       activities: [
@@ -135,7 +138,8 @@ const data = {
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
-      mainImage: "https://pbs.twimg.com/media/GMb7CXIW0AA_Wll.jpg:large",
+      mainImage:
+        "https://pbs.twimg.com/media/FzdnHBNakAA3rO3?format=jpg&name=orig",
       summary:
         "S9 카에데는 밝고 쾌활한 성격의 소유자로, 귀여운 외모에 높은 아이돌 능력치로 주목 받고 있다! 다이나믹한 댄스가 강점!",
       activities: [
@@ -165,7 +169,7 @@ const data = {
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
-      mainImage: "https://pbs.twimg.com/media/GMb7CXIW0AA_Wll.jpg:large",
+      mainImage: "https://pbs.twimg.com/media/GLPwA6pW0AA_owW.jpg:large",
       summary:
         "S9 카에데는 밝고 쾌활한 성격의 소유자로, 귀여운 외모에 높은 아이돌 능력치로 주목 받고 있다! 다이나믹한 댄스가 강점!",
       activities: [
@@ -195,7 +199,7 @@ const data = {
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
-      mainImage: "https://pbs.twimg.com/media/GMb7CXIW0AA_Wll.jpg:large",
+      mainImage: "https://i.mydramalist.com/d8gXb_5f.jpg",
       summary:
         "S9 카에데는 밝고 쾌활한 성격의 소유자로, 귀여운 외모에 높은 아이돌 능력치로 주목 받고 있다! 다이나믹한 댄스가 강점!",
       activities: [
@@ -225,7 +229,8 @@ const data = {
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
-      mainImage: "https://pbs.twimg.com/media/GMb7CXIW0AA_Wll.jpg:large",
+      mainImage:
+        "https://i.pinimg.com/736x/79/8a/97/798a97e463b536b41a8b9661e5fea4d7.jpg",
       summary:
         "S9 카에데는 밝고 쾌활한 성격의 소유자로, 귀여운 외모에 높은 아이돌 능력치로 주목 받고 있다! 다이나믹한 댄스가 강점!",
       activities: [
@@ -255,7 +260,8 @@ const data = {
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
-      mainImage: "https://pbs.twimg.com/media/GMb7CXIW0AA_Wll.jpg:large",
+      mainImage:
+        "https://i.seadn.io/s/raw/files/be30cd8b294ba6f65ef8b78d49f5c9cc.png?auto=format&dpr=1&w=1000",
       summary:
         "S9 카에데는 밝고 쾌활한 성격의 소유자로, 귀여운 외모에 높은 아이돌 능력치로 주목 받고 있다! 다이나믹한 댄스가 강점!",
       activities: [
