@@ -61,7 +61,7 @@ function Navbar() {
           <div
             className={`${
               showMembers ? "block" : "hidden"
-            } absolute z-60 bg-gray-800 p-5 flex flex-col gap-3 text-white`}
+            } absolute z-60 bg-gray-800 p-5 flex flex-col gap-3 text-white top-10`}
           >
             {data.members.map((member) => (
               <Link
@@ -86,7 +86,7 @@ function Navbar() {
           <div
             className={`${
               showAlbums ? "block" : "hidden"
-            } absolute z-60 bg-gray-800 text-white p-5 flex flex-col gap-3`}
+            } absolute z-60 bg-gray-800 text-white p-5 flex flex-col gap-3 top-10`}
           >
             {data.albums.map((album) => (
               <Link
