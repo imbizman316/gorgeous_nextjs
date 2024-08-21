@@ -58,12 +58,7 @@ const data = {
         "2021 MBC '방과후 설렘'",
       ],
       photoAlbums: ["2022.12 Y매거진"],
-      photos: [
-        "/images/kaede_01.jpg",
-        "/images/kaede_02.jpg",
-        "/images/kaede_03.jpg",
-        "/images/kaede_04.jpg",
-      ],
+      photos: ["/images/seoyeon_01.jpg"],
       videos: [
         "https://www.youtube.com/embed/tuGbExoxJEk",
         "https://www.youtube.com/embed/26aXWkTp9L4",
@@ -74,9 +69,9 @@ const data = {
       id: "s2-hyerin",
       name: "HyeRin",
       image1:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b417ecacf18a73ddff_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b3344b991e0f851579_S2_%E1%84%92%E1%85%A8%E1%84%85%E1%85%B5%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
       image2:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3048de580e73ad7d894_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b30470a642b8356c3969_S2_%E1%84%92%E1%85%A8%E1%84%85%E1%85%B5%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
       link: "s2-hyerin",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
@@ -93,12 +88,7 @@ const data = {
         "2021 MBC '방과후 설렘'",
       ],
       photoAlbums: ["2022.12 Y매거진"],
-      photos: [
-        "/images/kaede_01.jpg",
-        "/images/kaede_02.jpg",
-        "/images/kaede_03.jpg",
-        "/images/kaede_04.jpg",
-      ],
+      photos: ["/images/hyerin_01.jpg"],
       videos: [
         "https://www.youtube.com/embed/tuGbExoxJEk",
         "https://www.youtube.com/embed/26aXWkTp9L4",
@@ -109,9 +99,9 @@ const data = {
       id: "s3-jiwoo",
       name: "JiWoo",
       image1:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b417ecacf18a73ddff_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc632a46ae80c0f7ce6e5_S3_%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AE_ASSEMBLE24_01_s-p-500.jpg",
       image2:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3048de580e73ad7d894_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3047d6d553fbd73239a_S3_%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AE_ASSEMBLE24_02_s-p-500.jpg",
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
@@ -128,12 +118,7 @@ const data = {
         "2021 MBC '방과후 설렘'",
       ],
       photoAlbums: ["2022.12 Y매거진"],
-      photos: [
-        "/images/kaede_01.jpg",
-        "/images/kaede_02.jpg",
-        "/images/kaede_03.jpg",
-        "/images/kaede_04.jpg",
-      ],
+      photos: ["/images/jiwoo_01.jpg"],
       videos: [
         "https://www.youtube.com/embed/tuGbExoxJEk",
         "https://www.youtube.com/embed/26aXWkTp9L4",
@@ -144,9 +129,9 @@ const data = {
       id: "s4-chaeyeon",
       name: "ChaeYeon",
       image1:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b417ecacf18a73ddff_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b484c7f360e033c64c_S4_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
       image2:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3048de580e73ad7d894_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3064431ac89a6f52695_S4_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
@@ -163,12 +148,7 @@ const data = {
         "2021 MBC '방과후 설렘'",
       ],
       photoAlbums: ["2022.12 Y매거진"],
-      photos: [
-        "/images/kaede_01.jpg",
-        "/images/kaede_02.jpg",
-        "/images/kaede_03.jpg",
-        "/images/kaede_04.jpg",
-      ],
+      photos: ["/images/chaeyeon_01.jpg"],
       videos: [
         "https://www.youtube.com/embed/tuGbExoxJEk",
         "https://www.youtube.com/embed/26aXWkTp9L4",
@@ -179,9 +159,9 @@ const data = {
       id: "s5-yooyeon",
       name: "YooYeon",
       image1:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b417ecacf18a73ddff_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b38a72a974e5520010_S5_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
       image2:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3048de580e73ad7d894_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b30427adcfc68c212939_S5_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
@@ -198,12 +178,7 @@ const data = {
         "2021 MBC '방과후 설렘'",
       ],
       photoAlbums: ["2022.12 Y매거진"],
-      photos: [
-        "/images/kaede_01.jpg",
-        "/images/kaede_02.jpg",
-        "/images/kaede_03.jpg",
-        "/images/kaede_04.jpg",
-      ],
+      photos: ["/images/yooyeon_01.jpg"],
       videos: [
         "https://www.youtube.com/embed/tuGbExoxJEk",
         "https://www.youtube.com/embed/26aXWkTp9L4",
@@ -214,9 +189,9 @@ const data = {
       id: "s6-soomin",
       name: "SooMin",
       image1:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b417ecacf18a73ddff_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b3ebae8afb1dac245a_S6_%E1%84%89%E1%85%AE%E1%84%86%E1%85%B5%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
       image2:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3048de580e73ad7d894_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b30466437b0ebcef9844_S6_%E1%84%89%E1%85%AE%E1%84%86%E1%85%B5%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
@@ -233,12 +208,7 @@ const data = {
         "2021 MBC '방과후 설렘'",
       ],
       photoAlbums: ["2022.12 Y매거진"],
-      photos: [
-        "/images/kaede_01.jpg",
-        "/images/kaede_02.jpg",
-        "/images/kaede_03.jpg",
-        "/images/kaede_04.jpg",
-      ],
+      photos: ["/images/soomin_01.jpg"],
       videos: [
         "https://www.youtube.com/embed/tuGbExoxJEk",
         "https://www.youtube.com/embed/26aXWkTp9L4",
@@ -249,9 +219,9 @@ const data = {
       id: "s7-nakyoung",
       name: "NaKyoung",
       image1:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b417ecacf18a73ddff_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b2b09babfb88ab363f_S7_%E1%84%82%E1%85%A1%E1%84%80%E1%85%A7%E1%86%BC_ASSEMBLE24_01_s-p-500.jpg",
       image2:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3048de580e73ad7d894_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3049521d8852e38b2a1_S7_%E1%84%82%E1%85%A1%E1%84%80%E1%85%A7%E1%86%BC_ASSEMBLE24_02_s-p-500.jpg",
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
@@ -268,12 +238,7 @@ const data = {
         "2021 MBC '방과후 설렘'",
       ],
       photoAlbums: ["2022.12 Y매거진"],
-      photos: [
-        "/images/kaede_01.jpg",
-        "/images/kaede_02.jpg",
-        "/images/kaede_03.jpg",
-        "/images/kaede_04.jpg",
-      ],
+      photos: ["/images/nakyoung_01.jpg"],
       videos: [
         "https://www.youtube.com/embed/tuGbExoxJEk",
         "https://www.youtube.com/embed/26aXWkTp9L4",
@@ -284,9 +249,9 @@ const data = {
       id: "s8-yubin",
       name: "YuBin",
       image1:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b417ecacf18a73ddff_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/662cc4b3cb3e06695eb253cc_S8_%E1%84%8B%E1%85%B2%E1%84%87%E1%85%B5%E1%86%AB_ASSEMBLE24_01_s-p-500.jpg",
       image2:
-        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b3048de580e73ad7d894_S1_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%A7%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
+        "https://cdn.prod.website-files.com/654d79c08e32147b917ae9cf/6628b304c27a5186f5d1fa6e_S8_%E1%84%8B%E1%85%B2%E1%84%87%E1%85%B5%E1%86%AB_ASSEMBLE24_02_s-p-500.jpg",
       link: "s1-seoyeon",
 
       fullName: "山田 楓 (야마다 카에데, Yamada Kaede)",
@@ -303,12 +268,7 @@ const data = {
         "2021 MBC '방과후 설렘'",
       ],
       photoAlbums: ["2022.12 Y매거진"],
-      photos: [
-        "/images/kaede_01.jpg",
-        "/images/kaede_02.jpg",
-        "/images/kaede_03.jpg",
-        "/images/kaede_04.jpg",
-      ],
+      photos: ["/images/yubin_01.jpg"],
       videos: [
         "https://www.youtube.com/embed/tuGbExoxJEk",
         "https://www.youtube.com/embed/26aXWkTp9L4",
