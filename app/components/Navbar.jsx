@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import data from "./data";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useTheme } from "../context/ThemeContext";
 
 function Navbar() {
   const [showMembers, setShowMembers] = useState(false);
@@ -11,6 +12,8 @@ function Navbar() {
   const [currentMember, setCurrentMember] = useState("");
   const [currentAlbum, setCurrentAlbum] = useState("");
   const [showHamburger, setShowHamburger] = useState(false);
+
+  const { showMore, setShowMore } = useTheme();
 
   const handleMemberClick = () => {
     setShowAlbums(false);
@@ -98,6 +101,12 @@ function Navbar() {
               </Link>
             ))}
           </div>
+        </div>
+        <div
+          className="flex items-center justify-center text-sm cursor-pointer"
+          onClick={() => setShowMore(!showMore)}
+        >
+          <h1>More {showMore ? "-" : "+"}</h1>
         </div>
         <div className="bg-black text-white p-2 text-[11px] line-clamp-2 w-[120px] text-center">
           <a href="https://play.google.com/store/apps/details?id=com.modhaus.cosmo&referrer=adjust_reftag%3DcyCMUN3BM78nl%26utm_source%3Dcontents%26utm_campaign%3Dhomepage%26utm_content%3Ddownload%26utm_term%3Dgnb">
