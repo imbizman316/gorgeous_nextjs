@@ -8,6 +8,7 @@ import StickyNavbar from "./components/FrontendPractice/StickyNavbar";
 import TopMore from "./components/FrontendPractice/TopMore";
 import VideoContainer from "./components/VideoContainer";
 import { useTheme } from "./context/ThemeContext";
+import Anchors from "./components/FrontendPractice/Anchors";
 
 export default function Home() {
   const { showMore } = useTheme();
@@ -21,6 +22,7 @@ export default function Home() {
       <VideoContainer />
       <MembersPics />
       <Albums />
+      {/* <Anchors /> */}
     </div>
   );
 }
