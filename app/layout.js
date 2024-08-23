@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
-import TopMore from "./components/TopMore";
+import TopMore from "./components/FrontendPractice/TopMore";
 
 const inter = Inter({ subsets: ["latin"] });
 

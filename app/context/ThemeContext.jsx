@@ -8,9 +8,12 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
   const [showMore, setShowMore] = useState(false);
+  const [showHamburger, setShowHamburger] = useState(false);
 
   return (
-    <ThemeContext.Provider value={{ showMore, setShowMore }}>
+    <ThemeContext.Provider
+      value={{ showMore, setShowMore, showHamburger, setShowHamburger }}
+    >
       {children}
     </ThemeContext.Provider>
   );

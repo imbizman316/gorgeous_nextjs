@@ -5,15 +5,17 @@ import React, { useEffect, useState } from "react";
 import data from "./data";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useTheme } from "../context/ThemeContext";
+import TestHamburgerButton from "./FrontendPractice/TestHamburgerButton";
 
 function Navbar() {
   const [showMembers, setShowMembers] = useState(false);
   const [showAlbums, setShowAlbums] = useState(false);
   const [currentMember, setCurrentMember] = useState("");
   const [currentAlbum, setCurrentAlbum] = useState("");
-  const [showHamburger, setShowHamburger] = useState(false);
+  // const [showHamburger, setShowHamburger] = useState(false);
 
   const { showMore, setShowMore } = useTheme();
+  const { showHamburger, setShowHamburger } = useTheme();
 
   const handleMemberClick = () => {
     setShowAlbums(false);
@@ -114,10 +116,13 @@ function Navbar() {
           </a>
         </div>
       </div>
-      <GiHamburgerMenu
-        className="md:hidden lg:hidden sm:block block text-4xl"
+      {/* <GiHamburgerMenu
+        className={`md:hidden lg:hidden sm:block block text-4xl duration-200 ${
+          showHamburger ? "rotate-90" : ""
+        }`}
         onClick={() => setShowHamburger(!showHamburger)}
-      />
+      /> */}
+      <TestHamburgerButton />
     </div>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
 import React, { use, useEffect, useRef, useState } from "react";
-import { useTheme } from "../context/ThemeContext";
-import data from "./data";
+import { useTheme } from "../../context/ThemeContext";
+import data from "../data";
+import Link from "next/link";
 
 function TopMore() {
   const { showMore } = useTheme();
@@ -21,7 +22,9 @@ function TopMore() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
-        setSearchResults([]);
+        setTimeout(() => {
+          setSearchResults([]);
+        }, 500);
       }
     };
 
@@ -36,7 +39,7 @@ function TopMore() {
       const results = [];
 
       data.members.forEach((item) => {
-        if (item.name.toLowerCase().includes(input)) {
+        if (item.name.toLowerCase().includes(input.toLowerCase())) {
           results.push(item);
         }
       });
@@ -69,12 +72,23 @@ function TopMore() {
           </div>
 
           {searchResults.length > 0 ? (
-            <div className="absolute top-[210px] h-[200px] bg-white z-40 w-[300px] flex flex-col items-center border-2 shadow-lg">
+            <div className="absolute top-[210px] h-auto py-5 bg-white z-40 w-[300px] flex flex-col items-center border-2 shadow-lg">
               <h1 className="py-5 text-sm">Search Results</h1>
               <hr className="w-full p-3" />
-              {searchResults.map((result) => (
-                <div key={result.id}>{result.name}</div>
-              ))}
+              <div className="flex flex-col gap-3 w-full">
+                {searchResults.map((result) => (
+                  <li key={result.id}>
+                    <Link
+                      href={`/member/${result.id}`}
+                      className="text-sm hover:bg-gray-200 w-[260px] p-5"
+
+                      // ref={dropDownRef}
+                    >
+                      {result.name}
+                    </Link>
+                  </li>
+                ))}
+              </div>
             </div>
           ) : (
             <></>
