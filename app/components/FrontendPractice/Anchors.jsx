@@ -2,58 +2,55 @@ import React, { useEffect, useRef, useState } from "react";
 
 function Anchors() {
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [navbarOffset, setNavbarOffset] = useState(0);
+  const [scrolling, setScrolling] = useState(false); // New state to track scrolling
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
 
   useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Avoid handling scroll events while scrolling is in progress
+      if (scrolling) return;
+
+      if (currentScrollY > 6000 && currentScrollY < 7000) {
+        if (currentScrollY > lastScrollY) {
+          scrollToRef(ref2); // Scrolling down to ref2
+        } else {
+          scrollToRef(ref1); // Scrolling up to ref1
+        }
+      } else if (currentScrollY >= 7000 && currentScrollY < 8000) {
+        if (currentScrollY > lastScrollY) {
+          scrollToRef(ref3); // Scrolling down to ref3
+        } else {
+          scrollToRef(ref2); // Scrolling up to ref2
+        }
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
-  // }, [lastScrollY]);
-
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    console.log(currentScrollY);
-
-    if (currentScrollY > 7100 && currentScrollY > lastScrollY) {
-      scrollToRef(ref3);
-    } else if (currentScrollY > 6029 && currentScrollY > lastScrollY) {
-      scrollToRef(ref2);
-    }
-
-    if (currentScrollY < lastScrollY) {
-      if (currentScrollY > 6500) {
-        scrollToRef(ref2);
-      } else if (currentScrollY > 7500) {
-        scrollToRef(ref1);
-      }
-    }
-
-    // const scrollDifference = currentScrollY - lastScrollY;
-
-    // const sensitivity = 20;
-
-    // if (scrollDifference > sensitivity) {
-    //   setNavbarOffset((prev) => Math.min(prev + scrollDifference, 400));
-    // } else if (scrollDifference < -sensitivity) {
-    //   setNavbarOffset((prev) => Math.max(prev + scrollDifference, 0));
-    // }
-
-    setLastScrollY(currentScrollY);
-  };
-
-  const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
+  }, [lastScrollY, scrolling]);
 
   const scrollToRef = (ref) => {
     if (ref.current) {
+      setScrolling(true); // Set scrolling flag to true
+
       window.scrollTo({
-        top: ref.current.offsetTop,
+        top: ref.current.offsetTop - 10,
         behavior: "smooth",
       });
+
+      // Set a timeout to reset scrolling flag after the scroll animation
+      setTimeout(() => {
+        setScrolling(false);
+      }, 500); // Adjust timeout duration based on scroll speed
     }
   };
 
@@ -61,7 +58,6 @@ function Anchors() {
     <div>
       <div style={{ position: "fixed", top: 0, left: 0, zIndex: 1000 }}>
         <button onClick={() => scrollToRef(ref1)}>1: First</button>{" "}
-        {/* Scroll to ref1 */}
         <button onClick={() => scrollToRef(ref2)}>2: Second</button>
         <button onClick={() => scrollToRef(ref3)}>3: Third</button>
       </div>
