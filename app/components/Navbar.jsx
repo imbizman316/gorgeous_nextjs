@@ -43,7 +43,7 @@ function Navbar() {
   }, [currentMember, currentAlbum]);
 
   return (
-    <div className="flex flex-row justify-between mx-auto px-10 py-5 items-center fixed w-full h-[100px] z-50 bg-white opacity-[95%]">
+    <div className="flex flex-row justify-between mx-auto px-10 py-5 items-center fixed w-full h-[100px] z-50 bg-white bg-opacity-30 backdrop-blur-lg border border-white/30 shadow-lg">
       <Link className="text-3xl font-bold" href="/">
         <div>tripleS</div>
       </Link>
@@ -53,7 +53,7 @@ function Navbar() {
           (!showHamburger && "lg:flex md:flex-row lg:flex-row gap-6 md:flex")
         } ${
           showHamburger
-            ? "flex flex-col items-center justify-start pt-10 absolute w-full top-24 bg-white left-0 min-h-[30rem]"
+            ? "flex flex-col items-center justify-start pt-10 absolute w-full top-24 bg-white bg-opacity-30 backdrop-blur-lg left-0 min-h-[30rem] border border-white/30"
             : "hidden"
         }`}
       >
@@ -116,12 +116,6 @@ function Navbar() {
           </a>
         </div>
       </div>
-      {/* <GiHamburgerMenu
-        className={`md:hidden lg:hidden sm:block block text-4xl duration-200 ${
-          showHamburger ? "rotate-90" : ""
-        }`}
-        onClick={() => setShowHamburger(!showHamburger)}
-      /> */}
       <TestHamburgerButton />
     </div>
   );

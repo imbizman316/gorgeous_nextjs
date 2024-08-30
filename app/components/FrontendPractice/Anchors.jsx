@@ -1,78 +1,90 @@
 import React, { useEffect, useRef, useState } from "react";
 
 function Anchors() {
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrolling, setScrolling] = useState(false); // New state to track scrolling
+  const [scrolling, setScrolling] = useState(false);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      // Avoid handling scroll events while scrolling is in progress
       if (scrolling) return;
 
-      if (currentScrollY > 6000 && currentScrollY < 7000) {
-        if (currentScrollY > lastScrollY) {
-          scrollToRef(ref2); // Scrolling down to ref2
+      setScrolling(true);
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      if (scrollY < viewportHeight) {
+        if (scrollY >= viewportHeight * 0.5) {
+          ref2.current.scrollIntoView({ behavior: "smooth" });
         } else {
-          scrollToRef(ref1); // Scrolling up to ref1
+          ref1.current.scrollIntoView({ behavior: "smooth" });
         }
-      } else if (currentScrollY >= 7000 && currentScrollY < 8000) {
-        if (currentScrollY > lastScrollY) {
-          scrollToRef(ref3); // Scrolling down to ref3
+      } else if (scrollY < viewportHeight * 2) {
+        if (scrollY >= viewportHeight * 1.5) {
+          ref3.current.scrollIntoView({ behavior: "smooth" });
         } else {
-          scrollToRef(ref2); // Scrolling up to ref2
+          ref2.current.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        if (scrollY >= viewportHeight * 2.5) {
+          // Nothing further down, but if there was more content, you'd handle it here.
+        } else {
+          ref3.current.scrollIntoView({ behavior: "smooth" });
         }
       }
 
-      setLastScrollY(currentScrollY);
+      setTimeout(() => {
+        setScrolling(false);
+      }, 500); // Adjust delay if needed
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY, scrolling]);
-
-  const scrollToRef = (ref) => {
-    if (ref.current) {
-      setScrolling(true); // Set scrolling flag to true
-
-      window.scrollTo({
-        top: ref.current.offsetTop - 10,
-        behavior: "smooth",
-      });
-
-      // Set a timeout to reset scrolling flag after the scroll animation
-      setTimeout(() => {
-        setScrolling(false);
-      }, 500); // Adjust timeout duration based on scroll speed
-    }
-  };
+  }, [scrolling]);
 
   return (
     <div>
-      <div style={{ position: "fixed", top: 0, left: 0, zIndex: 1000 }}>
-        <button onClick={() => scrollToRef(ref1)}>1: First</button>{" "}
-        <button onClick={() => scrollToRef(ref2)}>2: Second</button>
-        <button onClick={() => scrollToRef(ref3)}>3: Third</button>
+      <div className="fixed top-0 left-0 z-50">
+        <button
+          onClick={() => ref1.current.scrollIntoView({ behavior: "smooth" })}
+          className="m-2 p-2 bg-blue-500 text-white"
+        >
+          1: First
+        </button>
+        <button
+          onClick={() => ref2.current.scrollIntoView({ behavior: "smooth" })}
+          className="m-2 p-2 bg-green-500 text-white"
+        >
+          2: Second
+        </button>
+        <button
+          onClick={() => ref3.current.scrollIntoView({ behavior: "smooth" })}
+          className="m-2 p-2 bg-pink-500 text-white"
+        >
+          3: Third
+        </button>
       </div>
 
-      <div ref={ref1} style={{ height: "100vh", backgroundColor: "lightblue" }}>
-        <h1>Screen 1</h1>
+      <div
+        ref={ref1}
+        className="h-screen bg-blue-500 flex items-center justify-center"
+      >
+        <h1 className="text-3xl text-white">Screen 1</h1>
       </div>
       <div
         ref={ref2}
-        style={{ height: "100vh", backgroundColor: "lightgreen" }}
+        className="h-screen bg-green-500 flex items-center justify-center"
       >
-        <h1>Screen 2</h1>
+        <h1 className="text-3xl text-white">Screen 2</h1>
       </div>
-      <div ref={ref3} style={{ height: "100vh", backgroundColor: "lightpink" }}>
-        <h1>Screen 3</h1>
+      <div
+        ref={ref3}
+        className="h-screen bg-pink-500 flex items-center justify-center"
+      >
+        <h1 className="text-3xl text-white">Screen 3</h1>
       </div>
     </div>
   );

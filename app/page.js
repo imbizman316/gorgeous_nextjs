@@ -22,7 +22,7 @@ export default function Home() {
       <VideoContainer />
       <MembersPics />
       <Albums />
-      <Anchors />
+      {/* <Anchors /> */}
     </div>
   );
 }
