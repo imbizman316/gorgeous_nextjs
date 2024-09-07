@@ -100,6 +100,7 @@ function PictureBoxes() {
         {data.members.map((member, index) => (
           <Link href={`/member/${member.id}`} key={index}>
             <div
+              className="duration-500"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseExit(index)}
               style={{

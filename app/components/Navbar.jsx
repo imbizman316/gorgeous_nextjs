@@ -6,6 +6,7 @@ import data from "./data";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useTheme } from "../context/ThemeContext";
 import TestHamburgerButton from "./FrontendPractice/TestHamburgerButton";
+import MemberSignup from "./(signup)/MemberSignup";
 
 function Navbar() {
   const [showMembers, setShowMembers] = useState(false);
@@ -16,6 +17,7 @@ function Navbar() {
 
   const { showMore, setShowMore } = useTheme();
   const { showHamburger, setShowHamburger } = useTheme();
+  const { signUpPopUp, setSignUpPopUp } = useTheme();
 
   const handleMemberClick = () => {
     setShowAlbums(false);
@@ -43,7 +45,7 @@ function Navbar() {
   }, [currentMember, currentAlbum]);
 
   return (
-    <div className="flex flex-row justify-between mx-auto px-10 py-5 items-center fixed w-full h-[100px] z-50 bg-white bg-opacity-30 backdrop-blur-lg border border-white/30 shadow-lg">
+    <div className="flex flex-row justify-between mx-auto px-10 py-5 items-center w-full h-[100px] z-50 bg-white bg-opacity-30 backdrop-blur-lg border border-white/30 shadow-lg fixed">
       <Link className="text-3xl font-bold" href="/">
         <div>tripleS</div>
       </Link>
@@ -110,13 +112,15 @@ function Navbar() {
         >
           <h1>More {showMore ? "-" : "+"}</h1>
         </div>
-        <div className="bg-black text-white p-2 text-[11px] line-clamp-2 w-[120px] text-center">
-          <a href="https://play.google.com/store/apps/details?id=com.modhaus.cosmo&referrer=adjust_reftag%3DcyCMUN3BM78nl%26utm_source%3Dcontents%26utm_campaign%3Dhomepage%26utm_content%3Ddownload%26utm_term%3Dgnb">
-            COSMO APP DOWNLOAD
-          </a>
+        <div
+          className="bg-black text-white p-2 py-3 text-[11px] line-clamp-2 w-[120px] text-center cursor-pointer"
+          onClick={() => setSignUpPopUp(true)}
+        >
+          BECOME A MEMBER
         </div>
       </div>
       <TestHamburgerButton />
+      {signUpPopUp && <MemberSignup />}
     </div>
   );
 }
